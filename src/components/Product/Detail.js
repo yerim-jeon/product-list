@@ -42,7 +42,6 @@ const Detail = ({ item }) => {
 
               const checkboxList = index === 0 ? '' : (
                 <Checkbox
-                  key={image}
                   checked={checkedImages.includes(image) ? true : false}
                   id={image}
                   name="detail"
@@ -51,7 +50,7 @@ const Detail = ({ item }) => {
               );
 
               return <>
-                <li key={image} className={isActive}>
+                <li key={`product_${product_id}/${image}`} className={isActive}>
                   {checkboxList}
                   <div onClick={() => handleClickImage(image)}>
                     <img src={`${process.env.PUBLIC_URL}/images/product_${product_id}/${image}`} alt={product_name} />
