@@ -1,10 +1,17 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ModalProvider } from './contexts/ModalContext';
+
+import ProductList from './pages/ProductList';
+
 const App = () => {
   return (
-    <div>
-      <span>
-        Hello World!
-      </span>
-    </div>
+    <BrowserRouter>
+      <ModalProvider>
+        <Routes>
+          <Route path="/" element={<ProductList />} />
+        </Routes>
+      </ModalProvider>
+    </BrowserRouter>
   );
 };
 
