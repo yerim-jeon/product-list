@@ -11,6 +11,7 @@ const Button = ({ type, children, onClick, className, disabled }) => {
 
 const DefaultButton = styled.button`
   display: inline-block;
+  cursor: pointer;
 `;
 
 export default Button;

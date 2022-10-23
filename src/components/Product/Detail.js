@@ -49,14 +49,14 @@ const Detail = ({ item }) => {
                 </Checkbox>
               );
 
-              return <>
+              return (
                 <li key={`product_${product_id}/${image}`} className={isActive}>
                   {checkboxList}
                   <div onClick={() => handleClickImage(image)}>
                     <img src={`${process.env.PUBLIC_URL}/images/product_${product_id}/${image}`} alt={product_name} />
                   </div>
                 </li>
-              </>;
+              );
             })}
           </ul>
           <p>원하는 뒷면 디자인을 선택해주세요.(<em>{checkedImages.length}</em>/{count}개)</p>
